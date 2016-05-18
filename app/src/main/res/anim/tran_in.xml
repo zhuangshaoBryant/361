@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<translate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="500"
+    android:fromXDelta="100%p"
+    android:toXDelta="0">
+	<!-- 起点是100%p,终点是0,以屏幕的左下角为标准0，100%p是右下角 -->
+</translate>
+

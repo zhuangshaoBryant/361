@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:text="功能列表" 
+        style="@style/TitleStyle"
+        />
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="快点使用361，吼吼哈嘿，2333！361仁者无敌，风生水起！" 
+        android:textColor="@color/black"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:focusable="true"
+        android:ellipsize="marquee"
+        android:focusableInTouchMode="true"
+        android:singleLine="true"
+
+        />
+    
+    <GridView 
+        android:id="@+id/gv_home"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"  
+        android:layout_weight="1"
+        android:numColumns="3"
+        android:verticalSpacing="20dp"
+        />
+    
+
+</LinearLayout>

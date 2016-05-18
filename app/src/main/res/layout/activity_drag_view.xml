@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5000"
+    >
+
+    <TextView
+        android:id="@+id/tv_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:background="@drawable/call_locate_blue"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:text="按住提示框拖到任意位置\n按手机返回键立即生效" />
+    
+    <TextView
+        android:id="@+id/tv_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:background="@drawable/call_locate_green"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:visibility="invisible"
+        android:text="按住提示框拖到任意位置\n按手机返回键立即生效" />
+
+    <ImageView
+        android:id="@+id/iv_drag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="121dp"
+        android:src="@drawable/drag" />
+
+</RelativeLayout>

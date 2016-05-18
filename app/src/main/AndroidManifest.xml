@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zhuang.safe361"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 拦截电话需要用到的权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+
+    <!-- shareSDK权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- 蓝牙分享所需的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".activity.SplashActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.HomeActivity"
+            android:label="@string/title_activity_home" >
+            <intent-filter>
+                <action android:name="android.intent.action.HOME" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.SettingActivity"
+            android:label="@string/title_activity_setting" >
+        </activity>
+        <activity
+            android:name=".activity.LostFindActivity"
+            android:label="@string/title_activity_lost_find" >
+        </activity>
+        <activity
+            android:name=".activity.Setup2Activity"
+            android:label="@string/title_activity_setup2" >
+        </activity>
+        <activity
+            android:name=".activity.Setup3Activity"
+            android:label="@string/title_activity_setup3" >
+        </activity>
+        <activity
+            android:name=".activity.Setup4Activity"
+            android:label="@string/title_activity_setup4" >
+        </activity>
+        <activity
+            android:name=".activity.Setup1Activity"
+            android:label="@string/title_activity_setup1" >
+        </activity>
+        <activity
+            android:name=".activity.ContactActivity"
+            android:label="@string/title_activity_contact" >
+        </activity>
+
+        <receiver android:name=".receiver.BootCompleteReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.SmsReceiver" >
+            <intent-filter android:priority="2147483647" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".service.LocationService" >
+        </service>
+        <service android:name=".service.AddressService" >
+        </service>
+
+        <activity
+            android:name=".activity.AdvanceToolsActivity"
+            android:label="@string/title_activity_advance_tools" >
+        </activity>
+        <activity
+            android:name=".activity.AddressQueryActivity"
+            android:label="@string/title_activity_address_query" >
+        </activity>
+        <activity
+            android:name=".activity.DragViewActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".activity.BlackNumberActivity"
+            android:label="@string/title_activity_call_safe" >
+        </activity>
+
+        <service android:name=".service.BlackNumberService" >
+        </service>
+
+        <activity
+            android:name=".activity.AppManagerActivity"
+            android:label="@string/title_activity_app_manager" >
+        </activity>
+        <activity android:name=".activity.ProcessManagerActivity" >
+        </activity>
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <intent-filter>
+                <data android:scheme="tencent100371282" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".activity.ProcessSettingActivity"
+            android:label="@string/title_activity_process_setting" >
+        </activity>
+
+        <service
+            android:name=".service.LockScreenService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+        <activity
+            android:name=".activity.CommonNumberQueryActivity"
+            android:label="@string/title_activity_common_number_query" >
+        </activity>
+
+        <receiver android:name=".receiver.MyAppWidgetProvider" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/process_widget_provider" />
+        </receiver>
+
+        <service
+            android:name=".service.UpdateWidgetService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+        <receiver android:name=".receiver.KillProcessReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.KILL_BACKGROUND_PROCESS" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activity.AppLockActivity"
+            android:label="@string/title_activity_app_lock" >
+        </activity>
+
+        <service
+            android:name=".service.WatchDogService"
+             >
+        </service>
+
+        <activity
+            android:name=".activity.EnterPsdActivity"
+            android:launchMode="singleInstance"
+            android:excludeFromRecents="true"
+             >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+
+    <TextView
+       style="@style/TitleStyle"
+        android:text="高级工具" />
+
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/button"
+    android:text="电话归属地查询"
+    android:clickable="true"
+    android:onClick="numberAddressQuery"
+    android:textSize="20sp"
+    android:textColor="@color/black"
+    android:gravity="center_vertical"
+    android:drawableLeft="@android:drawable/ic_menu_camera"
+    android:padding="10dp"
+    android:drawablePadding="5dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:text="短信备份"
+        android:clickable="true"
+        android:onClick="onClickSmsBackUP"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:gravity="center_vertical"
+        android:drawableLeft="@android:drawable/ic_menu_camera"
+        android:padding="10dp"
+        android:drawablePadding="5dp"/>
+
+    <ProgressBar
+        android:id="@+id/pb_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:text="常用号码查询"
+        android:clickable="true"
+        android:onClick="onClickCommonNumberQuery"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:gravity="center_vertical"
+        android:drawableLeft="@android:drawable/ic_menu_camera"
+        android:padding="10dp"
+        android:drawablePadding="5dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:text="程序锁"
+        android:clickable="true"
+        android:onClick="onClickAppLock"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:gravity="center_vertical"
+        android:drawableLeft="@android:drawable/ic_menu_camera"
+        android:padding="10dp"
+        android:drawablePadding="5dp"/>
+
+
+
+</LinearLayout>
