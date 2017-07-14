@@ -10,7 +10,7 @@ public class Setup1Activity extends BaseSetupActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_setup2);
+		setContentView(R.layout.activity_setup33);
 	}
 
 
