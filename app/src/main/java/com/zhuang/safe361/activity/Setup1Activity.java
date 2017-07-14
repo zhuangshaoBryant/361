@@ -1,4 +1,4 @@
-package com.zhuang.safe361.activity;
+﻿package com.zhuang.safe361.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +10,7 @@ public class Setup1Activity extends BaseSetupActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_setup1);
+		setContentView(R.layout.activity_setup2);
 	}
 
 
